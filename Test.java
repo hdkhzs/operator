@@ -153,8 +153,10 @@ public class Test {
 
         int[] ints10 = { 7, 7, -7, -7, 1, 0, 0, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MIN_VALUE,
                 Integer.MIN_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE,
-                Integer.MIN_VALUE + 1, Integer.MIN_VALUE + 1 };
-        int[] ints11 = { 3, -3, 3, -3, 0, 3, -3, 1, -1, 1, -1, 2, -2, 2, -2, 1, -1 };
+                Integer.MIN_VALUE + 1, Integer.MIN_VALUE + 1, Integer.MIN_VALUE, Integer.MIN_VALUE + 1, 0, 1, -1,
+                Integer.MAX_VALUE };
+        int[] ints11 = { 3, -3, 3, -3, 0, 3, -3, 1, -1, 1, -1, 2, -2, 2, -2, 1, -1, Integer.MIN_VALUE,
+                Integer.MIN_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE };
 
         i = 0;
         int[] divideAndRemainder = { 0, 0 };
