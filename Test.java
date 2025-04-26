@@ -1,13 +1,11 @@
 package self.operator;
 
-import java.io.IOException;
-
 public class Test {
     // 这个类中定义的所有方法都是基于移位运算、与运算、或运算、非运算、&&运算符、||运算符、==运算符和!=运算符实现的
     // 不依赖于+运算符、-运算符、*运算符、/运算符、%运算符、>运算符、<运算符、>=运算符和<=运算符
     // 用于实现加法运算、减法运算、乘法运算、除法运算、取模运算、比较运算
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         System.out.printf("%d / %d is %d\n", 7, 3, 7 / 3);
         System.out.printf("%d %% %d is %d\n", 7, 3, 7 % 3);
         System.out.printf("%d / %d is %d\n", 7, -3, 7 / -3);
