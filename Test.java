@@ -288,7 +288,7 @@ public class Test {
         return result;
     }
 
-    private static int[] AllLessZeroDivision(int dividend, int divisor) {
+    private static int[] dividendLessOrEqualZeroDivisorLessZero(int dividend, int divisor) {
         // 此方法只允许dividend小于等于0且divisor小于0
         // 不论是否溢出，返回值为程序上的{dividend / divisor, dividend % divisor}
         int[] result = { 0, 0 };
@@ -325,17 +325,17 @@ public class Test {
             throw new ArithmeticException("/ by zero");
         }
         int[] result = { 0, 0 };
-        if (isLess(dividend, 0) && isLess(divisor, 0)) {
-            return AllLessZeroDivision(dividend, divisor);
-        } else if (isGreaterOrEqual(dividend, 0) && isGreater(divisor, 0)) {
-            result = AllLessZeroDivision(subtract(0, dividend), subtract(0, divisor));
+        if (isLessOrEqual(dividend, 0) && isLess(divisor, 0)) {
+            return dividendLessOrEqualZeroDivisorLessZero(dividend, divisor);
+        } else if (isGreater(dividend, 0) && isGreater(divisor, 0)) {
+            result = dividendLessOrEqualZeroDivisorLessZero(subtract(0, dividend), subtract(0, divisor));
             result[1] = subtract(0, result[1]);
-        } else if (isGreaterOrEqual(dividend, 0) && isLess(divisor, 0)) {
-            result = AllLessZeroDivision(subtract(0, dividend), divisor);
+        } else if (isGreater(dividend, 0) && isLess(divisor, 0)) {
+            result = dividendLessOrEqualZeroDivisorLessZero(subtract(0, dividend), divisor);
             result[0] = subtract(0, result[0]);
             result[1] = subtract(0, result[1]);
-        } else if (isLess(dividend, 0) && isGreater(divisor, 0)) {
-            result = AllLessZeroDivision(dividend, subtract(0, divisor));
+        } else if (isLessOrEqual(dividend, 0) && isGreater(divisor, 0)) {
+            result = dividendLessOrEqualZeroDivisorLessZero(dividend, subtract(0, divisor));
             result[0] = subtract(0, result[0]);
         }
 
