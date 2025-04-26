@@ -291,12 +291,8 @@ public class Test {
     }
 
     private static int[] AllLessZeroDivision(int dividend, int divisor) {
-        // 此方法只允许dividend小于0且divisor小于0
-        // dividend不等于Integer.MIN_VALUE或divisor不等于-1的情况下，返回的数组的第一个元素是
-        // 数学上dividend除以divisor的商减1，等价于程序上dividend / divisor
-        // 第二个元素是数学上dividend除以divisor的余数加divisor，等价于程序上的dividend % divisor
-        // dividend等于Integer.MIN_VALUE且divisor不等于-1的情况下，返回{Integer.MIN_VALUE, 0}
-        // 等价于{dividend / divisor, dividend % divisor}
+        // 此方法只允许dividend小于等于0且divisor小于0
+        // 不论是否溢出，返回值为程序上的{dividend / divisor, dividend % divisor}
         int[] result = { 0, 0 };
         int shiftDivisor = divisor;
         while (isGreaterOrEqual(shiftDivisor, 0XC0000000) && isGreaterOrEqual(shiftDivisor << 1, dividend)) {
